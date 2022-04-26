@@ -1,9 +1,11 @@
 import fetch from "node-fetch";
+import { TASK, POST } from "../types/Types";
+
 export const getAllPostsData = async () => {
   const res = await fetch(
     "https://jsonplaceholder.typicode.com/posts/?_limit=10"
   );
-  const posts = await res.json();
+  const posts: POST[] = await res.json();
   return posts;
 };
 
@@ -11,7 +13,7 @@ export const getAllTasksData = async () => {
   const res = await fetch(
     "https://jsonplaceholder.typicode.com/todos/?_limit=10"
   );
-  const tasks = await res.json();
+  const tasks: TASK[] = await res.json();
   return tasks;
 };
 
@@ -19,8 +21,8 @@ export const getAllPostIds = async () => {
   const res = await fetch(
     "https://jsonplaceholder.typicode.com/posts/?_limit=10"
   );
-  const posts: any = await res.json();
-  return posts.map((post: any) => {
+  const posts: POST[] = await res.json();
+  return posts.map((post) => {
     return {
       params: {
         id: String(post.id),
@@ -31,7 +33,6 @@ export const getAllPostIds = async () => {
 
 export const getPostData = async (id: string) => {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
-  const post = await res.json();
-
+  const post: POST = await res.json();
   return post;
 };
