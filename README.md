@@ -6,7 +6,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
     npx create-next-app . --typescript
 #### Node.js version 10.13以降が必要です。 -> ターミナル `node -v`でver確認出来ます。
 ### 1-2.  必要 module のインストール
-    npm i axios msw swr
+    npm i axios swr
 ### 1-3.  prettierの設定 : package.json
 ~~~
 "prettier": {
@@ -16,7 +16,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ~~~  
 ## 2. React-testing-library の導入
 ### 2-1.  必要 module のインストール
-    yarn add -D jest@27.5.1 @testing-library/react @testing-library/jest-dom jest-css-modules @types/node-fetch
+    yarn add -D msw@0.39.2 next-page-tester@0.32.0 jest@27.5.1 @testing-library/react @testing-library/jest-dom jest-css-modules @types/node-fetch
 ### 2-2.  Project folder 直下に"jest.config.js"ファイルを作成して下記設定を追加
     touch jest.config.js
 ~~~
