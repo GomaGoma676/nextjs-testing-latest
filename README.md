@@ -6,9 +6,11 @@
 ### 1-2.  必要 module のインストール
     yarn add axios swr
 ### 1-3.  prettierの設定 : settingsでRequire Config + Format On Saveにチェック
+configファイル新規作成
 ~~~
 touch .prettierrc
 ~~~
+.prettierrcに下記内容を追加
 ~~~
 {
     "singleQuote": true,
