@@ -12,9 +12,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.5",
     "axios": "^0.27.0",
-    "msw": "^0.39.2",
     "next": "12.1.5",
-    "next-page-tester": "^0.32.0",
     "postcss": "^8.4.12",
     "react": "18.0.0",
     "react-dom": "18.0.0",
@@ -28,6 +26,8 @@
     "@types/node-fetch": "^2.6.1",
     "@types/react": "18.0.7",
     "@types/react-dom": "18.0.0",
+    "msw": "0.39.2",
+    "next-page-tester": "0.32.0",
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.5",
     "jest": "27.5.1",

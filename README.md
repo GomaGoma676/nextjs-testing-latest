@@ -6,7 +6,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
     npx create-next-app . --typescript
 #### Node.js version 10.13以降が必要です。 -> ターミナル `node -v`でver確認出来ます。
 ### 1-2.  必要 module のインストール
-    npm i axios swr
+    yarn add axios swr
 ### 1-3.  prettierの設定 : package.json
 ~~~
 "prettier": {
@@ -40,7 +40,7 @@ module.exports = createJestConfig(customJestConfig)
 ## 3. Tailwind CSS の導入
 https://tailwindcss.com/docs/guides/nextjs
 ### 3-1. 必要moduleのインストール
-    npm i tailwindcss@latest postcss@latest autoprefixer@latest
+    yarn add tailwindcss@latest postcss@latest autoprefixer@latest
 ### 3-2. tailwind.config.js, postcss.config.jsの生成
     npx tailwindcss init -p
 ### 3-3. tailwind.config.jsのcontent設定追加
@@ -78,7 +78,7 @@ const Home: React.FC = () => {
 }
 export default Home
 ~~~
-#### npm run dev -> Tailwind CSSが効いているかブラウザで確認
+#### yarn run dev -> Tailwind CSSが効いているかブラウザで確認
 ### 4-2. `__tests__`フォルダと`Home.test.tsx`ファイルの作成
 ~~~
 import { render, screen } from '@testing-library/react'
@@ -90,7 +90,7 @@ it('Should render hello text', () => {
   expect(screen.getByText('Hello Nextjs')).toBeInTheDocument()
 })
 ~~~
-#### npm test -> テストがPASSするか確認
+#### yarn test -> テストがPASSするか確認
 ~~~
  PASS  __tests__/Home.test.tsx
   ✓ Should render hello text (20 ms)
