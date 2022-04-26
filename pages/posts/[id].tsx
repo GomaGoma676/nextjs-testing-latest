@@ -13,10 +13,10 @@ const PostDetail: React.FC<POST> = ({ id, title, body }) => {
       </p>
       <p className="mb-4 text-xl font-bold">{title}</p>
       <p className="mx-10 mb-12">{body}</p>
-      <Link href="/blog-page">
-        <div className="flex cursor-pointer mt-12">
+      <Link href="/blog-page" passHref>
+        <div className="mt-12 flex cursor-pointer">
           <svg
-            className="w-6 h-6 mr-3"
+            className="mr-3 h-6 w-6"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -46,8 +46,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  //const { post: post } = await getPostData(ctx.params.id as string)
-  const post = await getPostData(ctx.params.id as string)
+  const post = await getPostData(ctx.params?.id as string)
   return {
     props: {
       ...post,
