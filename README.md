@@ -1,7 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Project setup : Nextjs+React-testing-library+TypeScript+Tailwind CSS
-
+## Project setup
 ## 1. Nextjs Project 新規作成
 ### 1-1.  create-next-app
     npx create-next-app . --typescript
@@ -17,7 +16,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ~~~  
 ## 2. React-testing-library の導入
 ### 2-1.  必要 module のインストール
-    yarn add -D jest@27.5.1 @testing-library/react @testing-library/jest-dom jest-css-modules
+    yarn add -D jest@27.5.1 @testing-library/react @testing-library/jest-dom jest-css-modules @types/node-fetch
 ### 2-2.  Project folder 直下に"jest.config.js"ファイルを作成して下記設定を追加
     touch jest.config.js
 ~~~
